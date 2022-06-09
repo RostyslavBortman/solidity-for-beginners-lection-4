@@ -12,3 +12,21 @@ Home task
 5. 1 user can do 3 bids maximum in total;
 6. When auction is finished, the last 3 bidders (winners) should be able to withdraw ERC20 tokens (which is at point 1) from the contract in proportion (50% for the 1 place, 30% for the 2nd, 20% for the 3rd);
 7. Cover everything by unit tests;
+
+```shell
+npx hardhat accounts
+npx hardhat compile
+npx hardhat clean
+npx hardhat test
+npx hardhat node
+npx hardhat run --network {network} scripts/deploy.js
+npx hardhat verify --contract "contracts/KarpunetsToken.sol:KarpunetsToken" --network {network} {address}
+npx hardhat help
+```
+
+.env file
+```dotenv
+ALCHEMY_KEY=
+ETHERSCAN_API_KEY=
+PRIVATE_KEY_TESTNET=
+```
