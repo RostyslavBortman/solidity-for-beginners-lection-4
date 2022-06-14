@@ -31,7 +31,7 @@ describe("KarpunetsToken", function () {
         })
         expect(await karpunetsToken.connect(user).balanceOf(user.address)).to.equal(ethers.utils.parseUnits("500", 18));
 
-        expect(karpunetsToken.connect(user).buy({
+        await expect(karpunetsToken.connect(user).buy({
             value: ethers.utils.parseEther("1.0")
         })).to.be.revertedWith("Your account allowed only 500 tokens");
     });
